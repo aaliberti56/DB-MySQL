@@ -1,4 +1,9 @@
-# 🗄️ ReVamp Ascent: Progettazione Database E-commerce
+# 🗄️ ReVamp Ascent | Enterprise Database Solutions
+> **Architettura Relazionale per E-commerce di Design**
+
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Database](https://img.shields.io/badge/Schema-Relazionale-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Complete-orange?style=for-the-badge)
 
 Benvenuti nella repository del database **ReVamp Ascent**. Questo progetto presenta l'architettura di un database relazionale professionale, progettato per una moderna piattaforma e-commerce di arredamento (ispirata al modello IKEA).
 
