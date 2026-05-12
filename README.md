@@ -20,10 +20,7 @@ L'obiettivo di questo progetto è dimostrare la progettazione di un database sca
 ## 📊 Schema Concettuale (Diagramma ER)
 Il database segue un modello relazionale normalizzato per garantire l'assenza di ridondanza dei dati.
 
-![Diagramma Entità-Relazione](./documents/ER_diagram.png)
-
-> [!TIP]
-> Il file sorgente modificabile è disponibile in [./documents/project_model.mwb](./documents/project_model.mwb).
+![Diagramma Entità-Relazione](./documentation/schemaERJpg.png)
 
 ---
 
@@ -32,7 +29,7 @@ Il database segue un modello relazionale normalizzato per garantire l'assenza di
 | Cartella | Descrizione |
 | :--- | :--- |
 | [**`/code`**](./code) | Contiene `schema.sql` (struttura), `population.sql` (dati di test) e `queries.sql` (analisi). |
-| [**`/documents`**](./documents) | Include il **Diagramma ER**, lo **Schema Logico** e la documentazione tecnica. |
+| [**`/documentation`**](./documentation) | Include il **Diagramma ER**, lo **Schema Logico** e la documentazione tecnica. |
 | **`README.md`** | Questo file (Presentazione del progetto). |
 
 ---
@@ -68,9 +65,9 @@ Riferimento testuale rapido della struttura relazionale:
 * **Cliente** (**nome_utente** [PK], email, nome, cognome, ...)
 * **Articolo** (**codice** [PK], nome, prezzo, *id_categoria* [FK], ...)
 * **Ordine** (**id_ordine** [PK], data, *nome_utente* [FK], ...)
-* *(Dettagli completi disponibili in [LOGICAL_SCHEMA.md](./documents/LOGICAL_SCHEMA.md))*
+* *(Dettagli completi disponibili in [LOGICAL_SCHEMA.md](./documentation/SchemaLogico.md))*
 
 ---
 
 ### 🖋️ Autore
-**Il Tuo Nome** *Studente di Informatica / Database Enthusiast* [Inserisci qui il tuo link LinkedIn o Portfolio]
+Antonio Aliberti *Studente di Informatica*
