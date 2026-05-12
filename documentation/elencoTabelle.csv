@@ -1,0 +1,70 @@
+Tabella,Colonna,"Tipo Dato",Nullabile,Chiave
+admin,cognome,varchar(50),YES,
+admin,nome,varchar(50),YES,
+admin,password,varchar(255),NO,
+admin,username,varchar(50),NO,PRI
+articolo,codice,int,NO,PRI
+articolo,colore,varchar(30),YES,
+articolo,descrizione,text,NO,
+articolo,dimensione,varchar(30),YES,
+articolo,id_categoria,int,NO,MUL
+articolo,nome,varchar(30),NO,
+articolo,peso,"decimal(10,3)",YES,
+articolo,prezzo,"decimal(10,2)",NO,
+articolo,sconto,"decimal(5,4)",YES,
+carrello,codice_articolo,int,NO,MUL
+carrello,id_carrello,int,NO,PRI
+carrello,nome_utente,varchar(50),NO,MUL
+carrello,quantita,"int unsigned",NO,
+categoria,id_categoria,int,NO,PRI
+categoria,tipologia,varchar(50),NO,
+cliente,cognome,varchar(50),NO,
+cliente,email,varchar(100),NO,UNI
+cliente,eta,"int unsigned",YES,
+cliente,nome,varchar(50),NO,
+cliente,nome_utente,varchar(50),NO,PRI
+cliente,num_telefono,varchar(15),NO,
+cliente,pass,varchar(225),NO,
+cliente,sesso,"enum('m','f')",NO,
+contenimento,codice,int,NO,PRI
+contenimento,id_ordine,int,NO,PRI
+contenimento,nome_articolo,varchar(100),NO,
+contenimento,prezzo_unitario,"decimal(10,2)",NO,
+contenimento,quantita,"int unsigned",NO,
+contenimento,sconto,"decimal(5,4)",YES,
+immaginearticolo,codice_articolo,int,YES,MUL
+immaginearticolo,descrizione,varchar(255),YES,
+immaginearticolo,id_immagine,int,NO,PRI
+immaginearticolo,is_principale,tinyint(1),YES,
+immaginearticolo,url,varchar(255),NO,
+indirizzo,cap,varchar(10),NO,
+indirizzo,citta,varchar(50),NO,
+indirizzo,id_indirizzo,int,NO,PRI
+indirizzo,nome_utente,varchar(50),NO,MUL
+indirizzo,paese,varchar(50),NO,
+indirizzo,preferito,tinyint(1),YES,
+indirizzo,provincia,varchar(50),NO,
+indirizzo,via,varchar(100),NO,
+metodi_pagamento,data_scadenza,date,NO,
+metodi_pagamento,intestatario,varchar(60),NO,
+metodi_pagamento,nome_utente,varchar(50),NO,MUL
+metodi_pagamento,num_carta,varchar(30),NO,PRI
+ordine,data,date,NO,
+ordine,id_indirizzo,int,YES,MUL
+ordine,id_ordine,int,NO,PRI
+ordine,importo_totale,"decimal(10,2)",NO,
+ordine,nome_utente,varchar(50),YES,MUL
+ordine,num_articoli,"int unsigned",NO,
+pagamento,data_pagamento,date,NO,
+pagamento,id_ordine,int,YES,MUL
+pagamento,id_pagamento,int,NO,PRI
+pagamento,importo,"decimal(10,2)",NO,
+pagamento,metodo_pagamento,varchar(50),NO,
+pagamento,stato_pagamento,"enum('In attesa','Completato','Fallito')",NO,
+recensione,codice,int,NO,MUL
+recensione,data,date,NO,
+recensione,id,int,NO,PRI
+recensione,nome_utente,varchar(50),NO,MUL
+recensione,testo,text,NO,
+recensione,titolo,varchar(100),NO,
+recensione,valutazione,int,YES,
