@@ -1,0 +1,22 @@
+# 📑 Schema Logico del Database (Relational Schema)
+
+In questa sezione è riportata la struttura logica delle tabelle.
+
+**Legenda:**
+- **PK**: Chiave Primaria (Primary Key)
+- **FK**: Chiave Esterna (Foreign Key)
+
+---
+
+- **Admin** (**username** [PK], password, nome, cognome)
+- **Cliente** (**nome_utente** [PK], pass, nome, cognome, email, sesso, eta, num_telefono)
+- **Indirizzo** (**id_indirizzo** [PK], via, citta, provincia, cap, paese, preferito, *nome_utente* [FK])
+- **Ordine** (**id_ordine** [PK], num_articoli, data, importo_totale, *id_indirizzo* [FK], *nome_utente* [FK])
+- **Categoria** (**id_categoria** [PK], tipologia)
+- **Articolo** (**codice** [PK], nome, descrizione, colore, sconto, prezzo, peso, dimensione, *id_categoria* [FK])
+- **Contenimento** (**codice** [PK/FK], **id_ordine** [PK/FK], quantita, nome_articolo, prezzo_unitario, sconto)
+- **Pagamento** (**id_pagamento** [PK], data_pagamento, importo, metodo_pagamento, stato_pagamento, *id_ordine* [FK])
+- **Metodi_pagamento** (**num_carta** [PK], intestatario, data_scadenza, *nome_utente* [FK])
+- **Recensione** (**id** [PK], valutazione, titolo, testo, data, *codice* [FK], *nome_utente* [FK])
+- **ImmagineArticolo** (**id_immagine** [PK], *codice_articolo* [FK], url, is_principale, descrizione)
+- **Carrello** (**id_carrello** [PK], *nome_utente* [FK], *codice_articolo* [FK], quantita)
