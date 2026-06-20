@@ -70,7 +70,6 @@ Riferimento testuale rapido della struttura relazionale:
 * **Cliente** (**nome_utente** [PK], email, nome, cognome, ...)
 * **Articolo** (**codice** [PK], nome, prezzo, *id_categoria* [FK], ...)
 * **Ordine** (**id_ordine** [PK], data, *nome_utente* [FK], ...)
-* *(Dettagli completi disponibili in [LOGICAL_SCHEMA.md](./documentation/SchemaLogico.md))*
 
 ---
 
